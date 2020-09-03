@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { PageHeader, Menu, Dropdown, Button, Tag, Typography, Row, Input } from 'antd';
+import { PageHeader, Menu, Dropdown, Button, Tag, Typography, Row, Input, Avatar } from 'antd';
 import { EllipsisOutlined, AppstoreOutlined } from '@ant-design/icons';
 
 const { Paragraph } = Typography;
@@ -47,23 +47,12 @@ const DropdownMenu = () => {
 
 const IndexHeader = () => {
     return (
-        <PageHeader
-            title="Title"
-            className="site-page-header"
-            subTitle="This is a subtitle"
-            tags={<Tag color="blue">Running</Tag>}
-            extra={[
-                <Input.Search 
-                    placeholder="input search text"                                 
-                    onSearch={value => console.log(value)} 
-                    style={{ width: 200 }} 
-                    enterButton
-                    key="search" 
-                />,
+        <PageHeader                        
+            extra={[               
+                <Avatar src='https://avatars1.githubusercontent.com/u/8186664?s=460&v=4' />,
                 <DropdownMenu key="more" />,
                 <Button key="btn-search"><AppstoreOutlined style={{fontsize:30}} width="4" height="4"/></Button>,
-            ]}
-            avatar={{ src: 'https://avatars1.githubusercontent.com/u/8186664?s=460&v=4' }}
+            ]}            
         />
     );
 }

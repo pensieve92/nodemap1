@@ -1,10 +1,12 @@
 import React from 'react';
+import Link from 'next/link';
 import {Card, Avatar, Button} from 'antd';
 
 import {EditTwoTone} from '@ant-design/icons';
-const Category = ({name, src}) => {
+const Category = ({title, src}) => {
     return (
-        <div>  
+        <div>              
+            <Link href={`/${title}`}><a>
             <Card hoverable style={{ width: "112px", borderRadius:"15px" }}>
                 <div style={{ justifyContent: "center", display: "flex", marginTop:"-1rem", marginBottom:"1rem" }}>
                     <Avatar 
@@ -16,9 +18,10 @@ const Category = ({name, src}) => {
                     />
                 </div>
                 <div style={{ justifyContent: "center", display: "flex", marginBottom:"-1rem"}}>
-                    <Button shape="round" size="middle" key={name}>{name}</Button>
+                    <Button shape="round" size="middle" key={title}>{title}</Button>
                 </div>
             </Card>
+            </a></Link>
         </div>
     );
 }

@@ -49,9 +49,9 @@ const IndexHeader = () => {
     return (
         <PageHeader                        
             extra={[               
-                <Avatar src='https://avatars1.githubusercontent.com/u/8186664?s=460&v=4' />,
+                <Avatar key="avatar" src='https://avatars1.githubusercontent.com/u/8186664?s=460&v=4' />,
                 <DropdownMenu key="more" />,
-                <Button key="btn-search"><AppstoreOutlined style={{fontsize:30}} width="4" height="4"/></Button>,
+                <Button key="btn-search"><AppstoreOutlined style={{fontSize:"1.5rem"}} width="4" height="4"/></Button>,
             ]}            
         />
     );
